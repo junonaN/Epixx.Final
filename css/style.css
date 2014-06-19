@@ -32,6 +32,7 @@ header, footer, div, img, a, h1, h2, h3, h4, h5, p, section, ul, li, input {
 	width: 1170px;
 	max-width: 1170px;
 	display: block !important;
+	max-width: 1170px;
 }
 .wrapper:after {
 	content: '';
@@ -65,10 +66,6 @@ header, footer, section {
 	font-size: 48px;
 }
 
-.order .active {
-
-}
-
 /* HEADER */
 header {
 	border-top: 5px solid  #2ea865;
@@ -86,33 +83,30 @@ header:after {
 	left: 0;
 }
 
-header .wrapper {
-	position: relative;
-}
 header .logo {
-	position: absolute;
-	top: 0;
-	left: 435px;
+	position: relative;
 }
 
 header .logo:after {
 	content: '';
 	display: block;
 	position: absolute;
-	bottom: -40px;
+	bottom: -44px;
 	left: 50px;
 	width: 273px;
 	height: 22px;
 	background: url('../img/bottom-triangle-gray.png') no-repeat;
+	z-index: 10;
 }
 
 header ul {
 	width: 100%;
+	text-align: center;
 }
 
 header li {
 	margin: 26px 10px 27px 10px;
-	padding: 16px 25px 11px 25px;
+	padding: 12px 25px 11px 25px;
 	font-family: "PT Sans";
 	font-size: 18px;
 	color: #fff;
@@ -129,12 +123,12 @@ header li>a {
 }
 
 header li.main {
-	padding-left: 30px;
+	margin-left: 30px;
 	float: left;
+	margin-right: 65px;
 }
 
 header li.pizza {
-	padding-left: 30px;
 	float: left;
 }
 
@@ -144,47 +138,107 @@ header li.sale {
 }
 
 header li.contacts {
-	padding-right: 30px;
+	margin-right: 30px;
 	float: right;
+	margin-left: 65px;
 }
 
 header li.logo {
 	border: 0;
+	padding: 0;
+	margin: 24px 10px 21px 20px;
+}
+
+header .order .active {
 	
 }
 
-
 /* BANNER SLIDER  */
 section.banner-slider {
+	min-height: 490px;
+	background: url('../img/banner.png');
+}
 
+section.banner-slider .wrapper {
+	position: relative;
+	height: 490px;
+	text-align: center;
+	line-height: 490px;
 }
 
 .banner-slider .description {
-
+	width: 850px;
+	text-align: left;
+	vertical-align: middle;
+	line-height: normal;
 }
 
 .banner-slider .description p {
+	font-size: 40px;
+	color: #fff;
+	font-family: "PT Sans", sans-serif;
+	margin-bottom: 10px;
+	opacity: 0.9;
+	padding: 3px 14px 5px 14px;
+}
 
+.banner-slider .description p.white {
+	color: #1aa156;
+}
+
+.banner-slider .next, .banner-slider .prev {
+	position: absolute;
+	background: url('../img/arrow-right-white-circle.png');
+	width: 49px;
+	height: 49px;
+	top: 220px;
 }
 
 .banner-slider .next {
-
+	right: -80px;
 }
 
 .banner-slider .prev {
-
+	left: -80px;
 }
 
-.banner-slider .cycle-slidershow {
-
+.banner-slider .next:hover, .banner-slider .prev:hover {
+	background: url('../img/arrow-left-green-circle.png');
 }
 
-.banner-slider .cycle-slidershow img {
-
+.banner-slider .prev, .banner-slider .next:hover {
+	-moz-transform: rotate(180deg); /* Для Firefox */
+    -ms-transform: rotate(180deg); /* Для IE */
+    -webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(180deg); /* Для Opera */
+    transform: rotate(180deg);
 }
 
-.banner-slider a.order {
+.banner-slider .prev:hover {
+	-moz-transform: none; /* Для Firefox */
+    -ms-transform: none; /* Для IE */
+    -webkit-transform: none; /* Для Safari, Chrome, iOS */
+    -o-transform: none; /* Для Opera */
+    transform: none;
+}
 
+.banner-slider .wrapper .container {
+	position: absolute;
+	bottom: 41px;
+	display: block;
+	width: 1170px;
+	height: 50px;
+	left: 0;
+	text-align: center;
+	line-height: 50px;
+}
+
+.banner-slider .wrapper .container a.order {
+	text-decoration: none;
+	color: #fff;
+	font-family: "PT Sans";
+	font-size: 18px;
+	padding: 0px 27px;
 }
 
 /* ADVANTAGES */
