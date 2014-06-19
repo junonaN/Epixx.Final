@@ -1,0 +1,257 @@
+/* Commomn rules */
+
+header, footer, div, img, a, h1, h2, h3, h4, h5, p, section, ul, li, input {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+.green {
+
+}
+
+.blue {
+
+}
+
+.white {
+
+}
+
+.logo {
+	
+}
+
+.order .active {
+
+}
+
+/* HEADER */
+header {
+
+}
+
+header ul {
+	
+}
+
+header li {
+
+}
+
+header li.active {
+
+}
+
+header li>a {
+
+}
+
+
+/* BANNER SLIDER  */
+section.banner-slider {
+
+}
+
+.banner-slider .description {
+
+}
+
+.banner-slider .description p {
+
+}
+
+.banner-slider .next {
+
+}
+
+.banner-slider .prev {
+
+}
+
+.banner-slider .cycle-slidershow {
+
+}
+
+.banner-slider .cycle-slidershow img {
+
+}
+
+.banner-slider a.order {
+
+}
+
+/* ADVANTAGES */
+
+section.advantages {
+
+}
+
+.advantage {
+
+}
+
+.advantage .title {
+
+}
+
+.advantage .description {
+
+}
+
+.advantage a.button {
+
+}
+
+/* REVIEW */
+
+section.review-block {
+
+}
+
+.review-panel {
+
+}
+
+.review-panel a.add-review-icon {
+	
+}
+
+.review-panel a.add-review {
+	
+}
+
+.review-panel p.description {
+	
+}
+
+.review-slider {
+
+}
+
+.review-slider .review {
+
+}
+
+.review .description {
+
+}
+
+.review .author {
+
+}
+
+.review .author img {
+
+}
+
+.review .author .name {
+
+}
+
+.review .author .position {
+
+}
+
+/* CLIENTS */
+
+section.clients {
+
+}
+
+.clients .title {
+
+}
+
+.clients .clients-slider {
+
+}
+
+.clients .clients-slider a {
+
+}
+
+.clients .next-client {
+
+}
+
+.clients .prev-client {
+
+}
+
+.clients-slider .nimax {
+
+}
+
+.clients-slider .astra {
+
+}
+
+.clients-slider .legion {
+
+}
+
+.clients-slider .epic {
+
+}
+
+.clients-slider .cat {
+
+}
+
+/* FOOTER */
+
+footer {
+
+}
+
+.logo-block {
+
+}
+
+.logo-block .subslogan {
+
+}
+
+footer .twitter-block {
+
+}
+
+footer .twitter-block p {
+
+}
+
+footer .contacts-block {
+
+}
+
+footer .contacts-block .socials {
+
+}
+
+.socials a {
+
+}
+
+.socials a.facebook {
+
+}
+
+.socials a.twitter {
+
+}
+
+.socials a.vimeo {
+
+}
+
+.socials a.picasa {
+
+}
+
+.contacts-block p {
+	
+}
