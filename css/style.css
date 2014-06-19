@@ -7,6 +7,7 @@ header, footer, div, img, a, h1, h2, h3, h4, h5, p, section, ul, li, input {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	display: inline-block;
+	font-family: "PT Sans";
 }
 
 @font-face {
@@ -22,9 +23,9 @@ header, footer, div, img, a, h1, h2, h3, h4, h5, p, section, ul, li, input {
   }
 
 @font-face {
-    font-family: 'Shlapak'; /* имя шрифта для CSS правил */
-    src: local('Shlapak'),
-         url(fonts/Shlapak Script.otf); /* проверяем наличие шрифта в ОС пользователя, если шрифт не установлен, тогда загружаем его по указанному пути */
+    font-family: 'Shlapak Script'; /* имя шрифта для CSS правил */
+    src: local('Shlapak Script'),
+         url(fonts/Shlapak Script.otf) format('opentype'); /* проверяем наличие шрифта в ОС пользователя, если шрифт не установлен, тогда загружаем его по указанному пути */
   }
   
 .wrapper {
@@ -62,8 +63,17 @@ header, footer, section {
 }
 
 .logo {
-	font-family: "Shlapak";
+	font-family: "Shlapak Script";
 	font-size: 48px;
+}
+
+.button {
+	height: 50px;
+	line-height: 50px;
+	padding: 0 27px;
+	font-size: 18px;
+	color: white;
+	background-color: #1aa156;
 }
 
 /* HEADER */
@@ -72,7 +82,7 @@ header {
 	position: relative;
 }
 
-header:after {
+header:after, footer .twitter-block:after {
 	content: '';
 	display: block;
 	position: absolute;
@@ -107,7 +117,6 @@ header ul {
 header li {
 	margin: 26px 10px 27px 10px;
 	padding: 12px 25px 11px 25px;
-	font-family: "PT Sans";
 	font-size: 18px;
 	color: #fff;
 	border: 1px solid rgba(46, 168, 101, 0.5);
@@ -149,10 +158,6 @@ header li.logo {
 	margin: 24px 10px 21px 20px;
 }
 
-header .order .active {
-	
-}
-
 /* BANNER SLIDER  */
 section.banner-slider {
 	min-height: 490px;
@@ -162,7 +167,6 @@ section.banner-slider {
 section.banner-slider .wrapper {
 	position: relative;
 	height: 490px;
-	text-align: center;
 	line-height: 490px;
 }
 
@@ -176,7 +180,6 @@ section.banner-slider .wrapper {
 .banner-slider .description p {
 	font-size: 40px;
 	color: #fff;
-	font-family: "PT Sans", sans-serif;
 	margin-bottom: 10px;
 	opacity: 0.9;
 	padding: 3px 14px 5px 14px;
@@ -204,6 +207,7 @@ section.banner-slider .wrapper {
 
 .banner-slider .next:hover, .banner-slider .prev:hover {
 	background: url('../img/arrow-left-green-circle.png');
+	cursor: pointer;
 }
 
 .banner-slider .prev, .banner-slider .next:hover {
@@ -236,7 +240,6 @@ section.banner-slider .wrapper {
 .banner-slider .wrapper .container a.order {
 	text-decoration: none;
 	color: #fff;
-	font-family: "PT Sans";
 	font-size: 18px;
 	padding: 0px 27px;
 }
@@ -244,24 +247,94 @@ section.banner-slider .wrapper {
 /* ADVANTAGES */
 
 section.advantages {
+	color: #fff;
+	text-align: center;
+}
 
+.advantages .slogan {
+	display: block;
+	width: 100%;
+	margin: 30px 30px 50px 30px;
+	padding-bottom: 10px;
+	vertical-align: top;
+	font-size: 30px;
+}
+
+.advantages .wrapper .block {
+	display: table;
 }
 
 .advantage {
+	width: 399px;
+	display: table-cell;
+	padding-right: 30px;
+	position: relative;
+	text-align: center;
+}
 
+.advantage:last-child {
+	width: 369px;
+}
+
+.advantage .title:before {
+	content: '';
+	position: absolute;
+	width: 119px;
+	height: 119px;
+	top: 10px;
+	left: 122px;
+
+}
+
+.advantage .basket:before {
+	background: url('../img/icon-shop-basket.png');
+}
+
+.advantage .bills:before {
+	background: url('../img/icon-bills-stack.png');
+}
+
+.advantage .truck:before {
+	background: url('../img/icon-truck.png');
+}
+
+.advantage .button {
+	background: none;
+	border: 1px solid  #1aa156;
+	position: absolute;
+	bottom: 50px;
+	left: 120px;
+	height: 50px;
+	width: 130px;
+	line-height: 50px;
+	font-size: 18px;
+	color: white;
+	cursor: pointer;
+	text-align: center;
+	padding: 0 10px;
+}
+
+.advantage .button:hover {
+	background: #1aa156;
+}
+
+.advantage:last-child {
+	padding: 0;
 }
 
 .advantage .title {
-
+	font-size: 18px;
+	margin-bottom: 20px;
+	padding-top: 160px;
 }
 
 .advantage .description {
-
+	font-size: 12px;
+	line-height: 21px;
+	margin-bottom: 135px;
 }
 
-.advantage a.button {
 
-}
 
 /* REVIEW */
 
@@ -316,7 +389,7 @@ section.review-block {
 /* CLIENTS */
 
 section.clients {
-
+	background: #f8f8f8;
 }
 
 .clients .title {
@@ -362,53 +435,102 @@ section.clients {
 /* FOOTER */
 
 footer {
-
+	width: 100%;
+	text-align: center;
+	padding-bottom: 10px;
 }
 
 .logo-block {
+	width: 100%;
+	border-top: 5px solid  #2ea865;
+}
 
+.logo-block .logo {
+	display: block;
+	margin-top: 100px;
+	padding: 0px 20px 18px 20px;
+	color: #fff;
 }
 
 .logo-block .subslogan {
-
+	display: block;
+	font-size: 18px;
+	color: #1aa156;
+	margin-bottom: 105px;
+	text-transform: lowercase;
 }
 
 footer .twitter-block {
-
+	width: 100%;
+	position: relative;
 }
 
 footer .twitter-block p {
+	margin: 80px 380px 80px 410px;
+	text-align: left;
+	position: relative;
+}
 
+footer .twitter-block p:before {
+	content: '';
+	width: 36px;
+	height: 27px;
+	position: absolute;
+	display: block;
+	top: 7px;
+	left: -55px;
+	background-image: url('../img/icon-twitter-gray.png');
 }
 
 footer .contacts-block {
+	width: 100%;
+	padding: 50px 50px 20px 50px;
+}
 
+footer .contacts-block .wrapper {
+	width: 300px;
 }
 
 footer .contacts-block .socials {
-
+	display: block;
+	width: 200px;
+	height: 50px;
+	margin: 0px auto 50px auto;
 }
 
 .socials a {
+	width: 50px;
+	height: 50px;
+	display: block;
+	float: left;
+	background-position: center center;
+	background-color: #1aa156;
+	background-repeat: no-repeat;
+}
 
+.socials a:hover {
+	background-color: #0f1521;
 }
 
 .socials a.facebook {
-
+	background-image: url('../img/socials/icon-facebook.png');
 }
 
 .socials a.twitter {
-
+	background-image: url('../img/socials/icon-twitter.png');
 }
 
 .socials a.vimeo {
-
-}
+	background-image: url('../img/socials/icon-vimeo.png');
+}	
 
 .socials a.picasa {
-
+	background-image: url('../img/socials/icon-picasa.png');
 }
 
 .contacts-block p {
-
+	width: 100%;
+	display: block;
+	font-size: 14px;
+	color: #1aa156;
 }
