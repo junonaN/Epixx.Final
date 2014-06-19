@@ -9,6 +9,26 @@ header, footer, div, img, a, h1, h2, h3, h4, h5, p, section, ul, li, input {
 	display: inline-block;
 }
 
+@font-face {
+    font-family: 'Open Sans'; /* имя шрифта для CSS правил */
+    src: local('Open Sans'),
+         url(fonts/Open Sans.ttf); /* проверяем наличие шрифта в ОС пользователя, если шрифт не установлен, тогда загружаем его по указанному пути */
+  }
+
+@font-face {
+    font-family: 'PT Sans'; /* имя шрифта для CSS правил */
+    src: local('PT Sans'),
+         url(fonts/PT Sans Narrow.ttf); /* проверяем наличие шрифта в ОС пользователя, если шрифт не установлен, тогда загружаем его по указанному пути */
+  }
+
+@font-face {
+    font-family: 'Shlapak'; /* имя шрифта для CSS правил */
+    src: local('Shlapak'),
+         url(fonts/Shlapak Script.otf); /* проверяем наличие шрифта в ОС пользователя, если шрифт не установлен, тогда загружаем его по указанному пути */
+  }
+  
+
+
 .green {
 
 }
@@ -116,7 +136,7 @@ section.review-block {
 
 }
 
-.review-panel a.add-review-icon {
+.review-panel div.add-review-icon {
 	
 }
 
@@ -253,5 +273,5 @@ footer .contacts-block .socials {
 }
 
 .contacts-block p {
-	
+
 }
