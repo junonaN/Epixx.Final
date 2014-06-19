@@ -5,6 +5,11 @@
 		<title>Название проекта</title>
 		<link rel='stylesheet' href='css/normalize.css' type='text/css'>
 		<link rel="stylesheet" href="css/style.css" type="text/css">
+
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="js/jquery.cycle2.min.js"></script>
+        <script src="js/script.js"></script>
+
 	</head>
 	<body>
     	<header class="gray">
@@ -90,15 +95,17 @@
         <section class="clients">
             <div class="wrapper">
                 <div class="title">Наши постоянные клиенты</div>
-                <div class="clients-slider cycle-slidershow">
-                    <a href="#" class="nimax"><img src="#" alt=""></a>
-                    <a href="#" class="astra"><img src="#" alt=""></a>
-                    <a href="#" class="legion"><img src="#" alt=""></a>
-                    <a href="#" class="epic"><img src="#" alt=""></a>
-                    <a href="#" class="cat"><img src="#" alt=""></a>
+                <div class="block">
+                    <div class="next-client gray"></div>
+                    <div class="clients-slider cycle-slidershow">
+                        <a href="#" class="nimax"></a>
+                        <a href="#" class="astra"></a>
+                        <a href="#" class="legion"></a>
+                        <a href="#" class="epic"></a>
+                        <a href="#" class="cat"></a>
+                    </div>
+                    <div class="prev-client gray"></div>
                 </div>
-                <div class="next-client green"></div>
-                <div class="prev-client gray"></div>
             </div>
         </section>
         <footer>
@@ -114,15 +121,15 @@
                 </div>
             </div>
             <div class="contacts-block">
-            <div class="wrapper">
-                <div class="socials">
-                        <a href="#" class="facebook"></a>
-                        <a href="#" class="twitter"></a>
-                        <a href="#" class="vimeo"></a>
-                        <a href="#" class="picasa"></a>
-                </div>
-                <p>Все права защищены</p>
-                <p>Сверстано с любовью Ярославом Каподастром</p>
+                <div class="wrapper">
+                    <div class="socials">
+                            <a href="#" class="facebook"></a>
+                            <a href="#" class="twitter"></a>
+                            <a href="#" class="vimeo"></a>
+                            <a href="#" class="picasa"></a>
+                    </div>
+                    <p>Все права защищены</p>
+                    <p>Сверстано с любовью Ярославом Каподастром</p>
                 </div>
             </div>
         </footer>
