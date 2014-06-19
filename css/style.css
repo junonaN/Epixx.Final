@@ -27,22 +27,42 @@ header, footer, div, img, a, h1, h2, h3, h4, h5, p, section, ul, li, input {
          url(fonts/Shlapak Script.otf); /* проверяем наличие шрифта в ОС пользователя, если шрифт не установлен, тогда загружаем его по указанному пути */
   }
   
-
-
-.green {
-
+.wrapper {
+	margin: 0 auto;
+	width: 1170px;
+	max-width: 1170px;
+	display: block !important;
+}
+.wrapper:after {
+	content: '';
+	clear: both;
+	display: block;
+	border: 0;
 }
 
-.blue {
+a {
+	text-decoration: none;
+}
 
+header, footer, section {
+	width: 100%;
+}
+
+.green {
+ 	background: #2ea865;
+}
+
+.gray {
+	background: #0f1521;
 }
 
 .white {
-
+	background: white;
 }
 
 .logo {
-	
+	font-family: "Shlapak";
+	font-size: 48px;
 }
 
 .order .active {
@@ -51,23 +71,86 @@ header, footer, div, img, a, h1, h2, h3, h4, h5, p, section, ul, li, input {
 
 /* HEADER */
 header {
+	border-top: 5px solid  #2ea865;
+	position: relative;
+}
 
+header:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	background: url('../img/bg-bottom-triangles-green.png') repeat-x;
+	bottom: -5px;
+	left: 0;
+}
+
+header .wrapper {
+	position: relative;
+}
+header .logo {
+	position: absolute;
+	top: 0;
+	left: 435px;
+}
+
+header .logo:after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -40px;
+	left: 50px;
+	width: 273px;
+	height: 22px;
+	background: url('../img/bottom-triangle-gray.png') no-repeat;
 }
 
 header ul {
-	
+	width: 100%;
 }
 
 header li {
-
+	margin: 26px 10px 27px 10px;
+	padding: 16px 25px 11px 25px;
+	font-family: "PT Sans";
+	font-size: 18px;
+	color: #fff;
+	border: 1px solid rgba(46, 168, 101, 0.5);
 }
 
 header li.active {
-
+	border: 1px solid rgba(46, 168, 101, 1);
 }
 
 header li>a {
+	color: #fff;
+	display: block;
+}
 
+header li.main {
+	padding-left: 30px;
+	float: left;
+}
+
+header li.pizza {
+	padding-left: 30px;
+	float: left;
+}
+
+header li.sale {
+	padding-left: 30px;
+	float: right;
+}
+
+header li.contacts {
+	padding-right: 30px;
+	float: right;
+}
+
+header li.logo {
+	border: 0;
+	
 }
 
 
@@ -129,7 +212,7 @@ section.advantages {
 /* REVIEW */
 
 section.review-block {
-
+	background: #f8f8f8;
 }
 
 .review-panel {
