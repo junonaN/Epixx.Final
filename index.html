@@ -7,7 +7,10 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css">
 
         <script src="http://code.jquery.com/jquery.js"></script>
-        <script src="js/jquery.cycle2.min.js"></script>
+        <!-- bxSlider Javascript file -->
+        <script src="js/jquery.bxslider.js"></script>
+        <!-- bxSlider CSS file -->
+        <!-- <link href="css/jquery.bxslider.css" rel="stylesheet" /> -->
         <script src="js/script.js"></script>
 
 	</head>
@@ -25,15 +28,16 @@
                 </nav>
             </div>
     	</header>
-    	<section  class="banner-slider">
+    	<section id="banner-slider" class="banner-slider">
             <div class="wrapper">
-                <div class="description">
+                <div class="b-slider 
+                description">
                     <p class="white">Все время кодишь и кодишь?</p>
                     <p class="green">Закажи пиццу, не отходя от компьютера!</p>
                     <p class="gray">Без регистрации и смс!</p>
                 </div>
-                <div class="next"></div>
-                <div class="prev"></div>
+                <div class="next-banner"></div>
+                <div class="prev-banner"></div>
                 <div class="container">
                     <a href="#" class="order active green">Хочу сейчас!</a>
                 </div>
@@ -65,29 +69,21 @@
         <section class="review-block">
             <div class="wrapper">
                 <div class="review-panel">
-                    <div class="add-review-icon gray"></div>
-                    <a href="#" class="add-review">Написать отзыв</a>
+                    <a href="#" class="add-review-text">Написать отзыв</a>
                     <p class="description">Напиши отзыв и получи напиток к своему следующему заказу!</p>
                     <a href="#" class="add-review green">Написать</a>
                 </div>
-                <div class="review-slider cycle-slidershow">
-                    <div class="review">
-                        <p class="description green">Когда-то давным-давно, когда я только начинал верстать , и только узнал о преимуществе верстки div'ами перед табличной версткой,  я кодил сутками напролет и иногда забывал даже поесть. Весь мой рацион составляло овсяное печенье и молоко, и очень много кофе. Теперь же я заказываю обед и ужин в <p class="shlapak">"Две скобочки"</p>, теперь я всегда сыт и код мой семантичен,  валиден и кроссбраузерн.  Невероятно рад, что однажды открыл для себя эту компанию! Желаю команде <p class="shlapak">"Две скобочки"</p> развития и реализации всего задуманного ибо цели у Вас благие чувствую я.  Мира и процветания! </p>
-                        <div class="author gray">
-                            <img src="#" alt="">
+                <ul class="review-slider" id="review-slider">
+                    <li class="review">
+                        <p class="description green">Когда-то давным-давно, когда я только начинал верстать , и только узнал о преимуществе верстки div'ами перед табличной версткой,  я кодил сутками напролет и иногда забывал даже поесть. Весь мой рацион составляло овсяное печенье и молоко, и очень много кофе. Теперь же я заказываю обед и ужин в <span class="shlapak">"Две скобочки"</span>, теперь я всегда сыт и код мой семантичен,  валиден и кроссбраузерн.  Невероятно рад, что однажды открыл для себя эту компанию! Желаю команде <span class="shlapak">"Две скобочки"</span> развития и реализации всего задуманного ибо цели у Вас благие чувствую я.  Мира и процветания! </p>
+                        <div class="gray controls"></div>  
+                        <div class="author">
+                            <img src="img/author.png" alt="">
                             <div class="name">Василий Васильев</div>
                             <div class="position">верстальщик</div>
                         </div>
-                    </div>
-                    <div class="review">
-                        <p class="description green">Когда-то давным-давно, когда я только начинал верстать , и только узнал о преимуществе верстки div'ами перед табличной версткой,  я кодил сутками напролет и иногда забывал даже поесть. Весь мой рацион составляло овсяное печенье и молоко, и очень много кофе. Теперь же я заказываю обед и ужин в <p class="shlapak">"Две скобочки"</p>, теперь я всегда сыт и код мой семантичен,  валиден и кроссбраузерн.  Невероятно рад, что однажды открыл для себя эту компанию! Желаю команде <p class="shlapak">"Две скобочки"</p> развития и реализации всего задуманного ибо цели у Вас благие чувствую я.  Мира и процветания! </p>
-                        <div class="author gray">
-                            <img src="#" alt="">
-                            <div class="name">Петр Петров</div>
-                            <div class="position">программист</div>
-                        </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
                 <div class="next-review"></div>
                 <div class="prev-review"></div>
             </div>
@@ -96,15 +92,34 @@
             <div class="wrapper">
                 <div class="title">Наши постоянные клиенты</div>
                 <div class="block">
-                    <div class="next-client gray"></div>
-                    <div class="clients-slider cycle-slidershow">
-                        <a href="#" class="nimax"></a>
-                        <a href="#" class="astra"></a>
-                        <a href="#" class="legion"></a>
-                        <a href="#" class="epic"></a>
-                        <a href="#" class="cat"></a>
-                    </div>
-                    <div class="prev-client gray"></div>
+                    <div class="next-client gray" id="next-client"></div>
+                    <div class="prev-client gray" id="prev-client"></div>
+                    <ul class="clients-slider" id="clients-slider">
+                        <li>
+                            <a href="#" class="nimax"><img src="img/clients/partner-1.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#" class="astra"><img src="img/clients/partner-2.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#" class="legion"><img src="img/clients/partner-3.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#" class="epic"><img src="img/clients/partner-4.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#" class="cat"><img src="img/clients/partner-5.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#" class="legion"><img src="img/clients/partner-3.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#" class="epic"><img src="img/clients/partner-4.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#" class="cat"><img src="img/clients/partner-5.png" alt=""></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>

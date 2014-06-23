@@ -7,7 +7,7 @@ header, footer, div, img, a, h1, h2, h3, h4, h5, p, section, ul, li, input {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	display: inline-block;
-	font-family: "PT Sans";
+	font-family: "PT Sans Narrow";
 }
 
 @font-face {
@@ -17,8 +17,8 @@ header, footer, div, img, a, h1, h2, h3, h4, h5, p, section, ul, li, input {
   }
 
 @font-face {
-    font-family: 'PT Sans'; /* имя шрифта для CSS правил */
-    src: local('PT Sans'),
+    font-family: 'PT Sans Narrow'; /* имя шрифта для CSS правил */
+    src: local('PT Sans Narrow'),
          url(fonts/PT Sans Narrow.ttf); /* проверяем наличие шрифта в ОС пользователя, если шрифт не установлен, тогда загружаем его по указанному пути */
   }
 
@@ -40,6 +40,26 @@ header, footer, div, img, a, h1, h2, h3, h4, h5, p, section, ul, li, input {
 	clear: both;
 	display: block;
 	border: 0;
+}
+
+.bx-wrapper {
+	margin: 0 !important;
+	padding: 0 !important;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.bx-wrapper .bx-prev {
+	width: 100% !important;
+	height: 100% !important;
+}
+.bx-wrapper .bx-controls-direction a.disabled {
+	display: none;
+}
+
+.clients-slider, .b-slider, .review-slider {
+	
 }
 
 a {
@@ -67,6 +87,11 @@ header, footer, section {
 	font-size: 48px;
 }
 
+.shlapak {
+	font-family: "Shlapak Script";
+	font-size: 18px;
+}
+
 .button {
 	height: 50px;
 	line-height: 50px;
@@ -76,13 +101,14 @@ header, footer, section {
 	background-color: #1aa156;
 }
 
+
 /* HEADER */
 header {
 	border-top: 5px solid  #2ea865;
 	position: relative;
 }
 
-header:after, footer .twitter-block:after {
+header:after, footer .twitter-block:after, section.review-block .cycle-slidershow .description:after {
 	content: '';
 	display: block;
 	position: absolute;
@@ -101,7 +127,7 @@ header .logo:after {
 	content: '';
 	display: block;
 	position: absolute;
-	bottom: -44px;
+	bottom: -43px;
 	left: 50px;
 	width: 273px;
 	height: 22px;
@@ -126,6 +152,10 @@ header li.active {
 	border: 1px solid rgba(46, 168, 101, 1);
 }
 
+header li:hover {
+	background-color: #2ea865;
+}
+
 header li>a {
 	color: #fff;
 	display: block;
@@ -137,12 +167,16 @@ header li.main {
 	margin-right: 65px;
 }
 
+header li.logo:hover {
+	background-color: rgba(46, 168, 101, 0.0);
+}
+
 header li.pizza {
 	float: left;
 }
 
 header li.sale {
-	padding-left: 30px;
+	margin-left: 30px;
 	float: right;
 }
 
@@ -210,20 +244,12 @@ section.banner-slider .wrapper {
 	cursor: pointer;
 }
 
-.banner-slider .prev, .banner-slider .next:hover {
+.banner-slider .prev {
 	-moz-transform: rotate(180deg); /* Для Firefox */
     -ms-transform: rotate(180deg); /* Для IE */
     -webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */
     -o-transform: rotate(180deg); /* Для Opera */
     transform: rotate(180deg);
-}
-
-.banner-slider .prev:hover {
-	-moz-transform: none; /* Для Firefox */
-    -ms-transform: none; /* Для IE */
-    -webkit-transform: none; /* Для Safari, Chrome, iOS */
-    -o-transform: none; /* Для Opera */
-    transform: none;
 }
 
 .banner-slider .wrapper .container {
@@ -242,6 +268,10 @@ section.banner-slider .wrapper {
 	color: #fff;
 	font-size: 18px;
 	padding: 0px 27px;
+}
+
+.banner-slider .wrapper .container a.order:hover {
+	background-color: #0f1521;
 }
 
 /* ADVANTAGES */
@@ -342,48 +372,146 @@ section.review-block {
 	background: #f8f8f8;
 }
 
-.review-panel {
-
+.review-block .wrapper {
+	position: relative;
 }
 
-.review-panel div.add-review-icon {
-	
+.review-panel {
+	margin: 30px 0;
+	width: 1170px;
+	height: 100px;
+	font-size: 18px;
+	padding: 0px 100px;
+	position: relative;
+	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,.1);
+	-moz-box-shadow: 0 1px 5px rgba(0,0,0,.1);
+	box-shadow: 0 1px 5px rgba(0,0,0,.1);
+	background-color: #fff;
+}
+
+.review-panel:before {
+	content: '';
+	background-image: url('../img/review-icon.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 100px;
+	background-color: #0f1521;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,.1);
+	-moz-box-shadow: 0 1px 5px rgba(0,0,0,.1);
+	box-shadow: 0 1px 5px rgba(0,0,0,.1);
+}
+
+.review-panel a.add-review-text {
+	padding: 0 20px 0 60px;
+	color: #1aa156;
+	width: 250px;
+	height: 100px;
+	position: relative;
+	line-height: 100px;
+}
+
+.review-panel a.add-review-text:hover {
+	color: #0f1521;
 }
 
 .review-panel a.add-review {
-	
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	line-height: 100px;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	color: #fff;
+}
+
+.review-panel a.add-review:hover {
+	background-color: #0f1521;
 }
 
 .review-panel p.description {
-	
+	height: 100px;
+	line-height: 100px;
+	width: 700px;
 }
 
-.review-slider {
+.review-block .cycle-slidershow {
+	width: 100%;
 
 }
 
-.review-slider .review {
+.review-block .cycle-slidershow .review {
+	position: relative;
+	width: 100%;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+}
 
+.review .controls {
+	height: 115px;
+	width: 100%;
 }
 
 .review .description {
-
+	padding: 55px 255px 85px 255px;
+	line-height: 18px;
+	position: relative;
 }
 
 .review .author {
-
+	position: absolute;
+	display: block;
+	bottom: 25px;
+	left: 0;
+	width: 100%;
 }
 
 .review .author img {
-
+	margin-bottom: 10px;
 }
 
 .review .author .name {
-
+	display: block;
+	width: 100%;
 }
 
 .review .author .position {
+	text-transform: lowercase;
+	color: #1aa156;
+}
 
+.review-block .next-review, .review-block .prev-review, .review-block .bx-next, .review-block .bx-prev {
+	position: absolute;
+	width: 27px;
+	height: 27px;
+	-webkit-background-size: 27px 27px;
+	background-size: 27px 27px;
+	background-image: url('../img/arrow-right-white-circle.png');
+	background-repeat: no-repeat;
+	bottom: 44px;
+	cursor: pointer;
+}
+
+.review-block .next-review, .review-block .bx-next {
+	right: 30px;
+}
+
+.review-block .prev-review, .review-block .bx-prev {
+	left: 30px;
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.review-block .next-review:hover, .review-block .prev-review:hover, .review-block .bx-next:hover, .review-block .bx-prev:hover {
+	background-image: url('../img/arrow-left-green-circle.png');
 }
 
 /* CLIENTS */
@@ -397,30 +525,50 @@ section.clients {
 	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,.1);
 	-moz-box-shadow: 0 1px 5px rgba(0,0,0,.1);
 	box-shadow: 0 1px 5px rgba(0,0,0,.1);
+	margin-top: 50px;
+	margin-bottom: 100px;
+	padding: 40px 20px;
 }
 
 .clients .wrapper .block {
 	position: relative;
-	width: 1130px;
+	width: 1030px;
 	height: 100px;
 	background-color: #f8f8f8;
+	margin-left: 50px;
+	padding-left: 30px;
+}
+
+.clients .bx-wrapper {
+	margin: 0px 0px !important;
+	padding: 0 !important;
+	height: 100px !important;
+	position: relative;
+	top: -18px;
 }
 
 .clients .title {
 	display: block;
 	width: 100%;
-	padding: 40px 20px;
+	padding: 0 0px 40px 0px;
+	font-size: 18px;
+	color: #1aa156;
 }
 
 .clients .clients-slider {
 	position: relative;
-	width: 1030px;
+	width: 100%;
 	height: 100px;
-	line-height: 100px;
-	margin-bottom: 100px;
+	margin-bottom: 40px;
+	padding: 0px 65px 0px 115px;
+	overflow: hidden;
 }
 
-.clients .next-client, .clients .prev-client {
+.clients .clients-slider li {
+	width: 200px;
+}
+
+.clients .bx-next, .clients .bx-prev {
 	background-image: url('../img/arrow-left-white.png');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -431,47 +579,41 @@ section.clients {
 	top: 0;
 	cursor: pointer;
 	z-index: 10;
+	background-color: #0f1521;
+	font-size: 0;
 }
 
-.clients .prev-client {
+.clients .bx-prev {
+	left: -50px;
+}
+
+.bx-controls-direction {
+	display: none;
+}
+
+.clients .bx-next {
+	right: -50px;
 	-webkit-transform: rotate(180deg);
 	-ms-transform: rotate(180deg);
 	-o-transform: rotate(180deg);
 	transform: rotate(180deg);
 }
 
-.clients .prev-client:hover, .clients .next-client:hover {
+.clients .bx-prev:hover, .clients .bx-next:hover {
 	background-color: #1aa156;
 }
 
 .clients .clients-slider a {
-	background-color: #f8f8f8;
-	background-position: center;
-	height: 100px;
 	display: block;
 	float: left;
-
+	margin-right: 60px;
+	line-height: 100px;
 }
 
-.clients-slider a.nimax {
-	background-image: url('../img/clients/partner-1.png');
+.clients .clients-slider a img {
+	vertical-align: middle;
 }
 
-.clients-slider a.astra {
-	background-image: url('../img/clients/partner-2.png');
-}
-
-.clients-slider a.legion {
-	background-image: url('../img/clients/partner-3.png');
-}
-
-.clients-slider a.epic {
-	background-image: url('../img/clients/partner-4.png');
-}
-
-.clients-slider a.cat {
-	background-image: url('../img/clients/partner-5.png');
-}
 
 /* FOOTER */
 
