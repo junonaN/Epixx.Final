@@ -22,7 +22,7 @@ $(document).ready(function(){
   		pager: false
 	});
 
-  	$('#b-slider').bxSlider({
+  	$('#banner-slider').bxSlider({
 	  	nextSelector: '#next-banner',
 	  	prevSelector: '#prev-banner',
 	  	nextText: '',

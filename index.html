@@ -28,20 +28,22 @@
                 </nav>
             </div>
     	</header>
-    	<section id="banner-slider" class="banner-slider">
+    	<section class="banner-block">
             <div class="wrapper">
-                <div class="b-slider 
-                description">
-                    <p class="white">Все время кодишь и кодишь?</p>
-                    <p class="green">Закажи пиццу, не отходя от компьютера!</p>
-                    <p class="gray">Без регистрации и смс!</p>
-                </div>
-                <div class="next-banner"></div>
-                <div class="prev-banner"></div>
-                <div class="container">
-                    <a href="#" class="order active green">Хочу сейчас!</a>
-                </div>
-                
+                <ul id="banner-slider">
+                    <li>
+                        <div class="description">
+                            <p class="white">Все время кодишь и кодишь?</p><br/>
+                            <p class="green">Закажи пиццу, не отходя от компьютера!</p><br/>
+                            <p class="gray">Без регистрации и смс!</p><br/>
+                            <div class="container">
+                                <a href="#" class="order active green">Хочу сейчас!</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div id="next-banner"></div>
+                <div id="prev-banner"></div>
             </div>
     	</section>
         <section class="advantages gray">
@@ -50,20 +52,38 @@
                 <div class="block">
                     <div class="advantage">
                         <div class="title basket">Выбери пиццу</div>
-                        <div class="description">Каждая пицца создается с учетом пристрастий и пожеланий ценителей. Гавайская и баварская, супер-острая и мясная, чизбургер-пицца, «Довольный верстальщик» и другие оригинальные рецепты. В нашем меню есть даже пицца, рецепт которой разработан специа</div>
-                        <a href="#" class="button order">Хочу выбрать</a>
                     </div>
                     <div class="advantage">
                         <div class="title bills">Оплати он-лайн</div>
-                        <div class="description">На сайте реализована специальная форма заказа, где вы можете указать любые личные пожелания. Оплата производится как наличными курьеру, так и по безналичному расчёту или электронными деньгами при оформлении заказа через интернет. Вы также можете попросить оплатить ваш заказ своего начальника или преподавателя.</div>
-                        <a href="#" class="button order">Хочу заказать</a>
                     </div>
                     <div class="advantage">
                         <div class="title truck">Мы доставим</div>
-                        <div class="description">Сделать заказ на доставку пиццы на дом или в офис вы можете круглосуточно, в любую погоду и даже когда мосты разведены, мы всегда доставим пиццу еще горячей, словно вы ее сами приготовили! Мы доставляем в течение написания 53 строчек кода. Если мы не успели в этот срок, пиццу вы получаете бесплатно!</div>
-                        <a href="#" class="button order">Хочу пиццу</a>
                     </div>
                 </div>
+            </div>
+            <div class="wrapper">
+                <div class="block">
+                    <div class="advantage">
+                        <div class="description">Каждая пицца создается с учетом пристрастий и пожеланий ценителей. Гавайская и баварская, супер-острая и мясная, чизбургер-пицца, «Довольный верстальщик» и другие оригинальные рецепты. В нашем меню есть даже пицца, рецепт которой разработан специа</div>
+                    </div>
+                    <div class="advantage">
+                        <div class="description">На сайте реализована специальная форма заказа, где вы можете указать любые личные пожелания. Оплата производится как наличными курьеру, так и по безналичному расчёту или электронными деньгами при оформлении заказа через интернет. Вы также можете попросить оплатить ваш заказ своего начальника или преподавателя.</div>
+                    </div>
+                    <div class="advantage">
+                        <div class="description">Сделать заказ на доставку пиццы на дом или в офис вы можете круглосуточно, в любую погоду и даже когда мосты разведены, мы всегда доставим пиццу еще горячей, словно вы ее сами приготовили! Мы доставляем в течение написания 53 строчек кода. Если мы не успели в этот срок, пиццу вы получаете бесплатно!</div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper buttons">
+                    <div class="advantage">
+                        <a href="#" class="button order">Хочу выбрать</a>
+                    </div>
+                    <div class="advantage">
+                        <a href="#" class="button order">Хочу заказать</a>
+                    </div>
+                    <div class="advantage">
+                        <a href="#" class="button order">Хочу пиццу</a>
+                    </div>
             </div>
         </section>
         <section class="review-block">
@@ -84,8 +104,8 @@
                         </div>
                     </li>
                 </ul>
-                <div class="next-review"></div>
-                <div class="prev-review"></div>
+                <div id="next-review"></div>
+                <div id="prev-review"></div>
             </div>
         </section>
         <section class="clients">
@@ -132,7 +152,7 @@
             </div>
             <div class="twitter-block green">
                 <div class="wrapper">
-                    <p>@super_verstaylshik Это просто улет! Я в полнейшем восторге! Всем советую!</p>
+                    <p><a href="https://twitter.com/hantim_frontend">@super_verstaylshik</a> Это просто улет! Я в полнейшем восторге! Всем советую!</p>
                 </div>
             </div>
             <div class="contacts-block">
